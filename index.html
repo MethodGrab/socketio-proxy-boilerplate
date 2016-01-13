@@ -24,6 +24,10 @@
 		s.on( 'connect_error', function ( err ) {
 			console.warn( 'Socket Connection Error', err );
 		});
+
+		s.on( 'msg', function ( msg ) {
+			console.log( 'Incoming message: "%s"', msg );
+		});
 	</script>
 </body>
 </html>

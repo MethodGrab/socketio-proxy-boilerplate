@@ -28,9 +28,16 @@ debug( `Socket.io path: ${io._path}` );
 
 io.on( 'connection', function ( socket ) {
 	debug( 'New socket connection (%s)', socket.conn.transport.name );
+	socket.emit( 'msg', 'Socket connected OK' );
+
+	// emit test messages
+	var timer = setInterval(function (  ) {
+		socket.emit( 'msg', 'ping' );
+	}, 2500);
 
 	socket.on( 'disconnect', function (  ) {
 		debug( 'Socket disconnected' );
+		clearInterval( timer );
 	});
 });
 
