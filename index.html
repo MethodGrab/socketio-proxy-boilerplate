@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SocketIO Test</title>
+</head>
+<body>
+	Socket.io test page
+	<script src="/ws/socket.io.js"></script>
+
+	<script>
+		/* global io */
+		'use strict';
+
+		// log socket.io debug messages
+		// localStorage.setItem( 'debug', 'socket.io-client:*,-socket.io-client:socket' );
+
+		var s = io( '', {
+			path         : '/ws',
+			transports   : ['polling', 'websocket'],
+			// reconnection : false,
+		});
+
+		s.on( 'connect_error', function ( err ) {
+			console.warn( 'Socket Connection Error', err );
+		});
+	</script>
+</body>
+</html>
