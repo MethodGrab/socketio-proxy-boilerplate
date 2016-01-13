@@ -1,4 +1,5 @@
 {
+  "private": true,
   "name": "socketio-proxy-boilerplate",
   "version": "0.1.0",
   "description": "An example of proxying socket.io connections",
