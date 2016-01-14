@@ -9,6 +9,10 @@
     "start": "node index.js",
     "start:dev": "DEBUG=spb:* nodemon index.js -w index.js -w index.html"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MethodGrab/socketio-proxy-boilerplate.git"
+  },
   "keywords": [
     "boilerplate",
     "demo",
